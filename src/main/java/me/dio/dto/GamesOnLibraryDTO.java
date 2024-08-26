@@ -2,8 +2,6 @@ package me.dio.dto;
 
 import me.dio.model.GamesOnLibrary;
 
-import java.time.LocalTime;
-
 public record GamesOnLibraryDTO(String name, Integer playedTime) {
 
     public GamesOnLibraryDTO(GamesOnLibrary model) {
