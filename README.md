@@ -28,7 +28,7 @@ classDiagram
 
   class GamesOnStore {
     -String name
-    -Number price
+    -Decimal price
   }
 
   class Plan {
