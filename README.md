@@ -39,8 +39,8 @@ classDiagram
     -String description
   }
 
-  User "1" *-- "N" GamesOnLibrary
-  User "1" *-- "N" GamesOnStore
-  User "1" *-- "1" Plan
-  User "1" *-- "N" News
+  Player "1" *-- "N" GamesOnLibrary
+  Player "1" *-- "N" GamesOnStore
+  Player "1" *-- "1" Plan
+  Player "1" *-- "N" News
 ```
