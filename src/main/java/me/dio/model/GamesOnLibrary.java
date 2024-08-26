@@ -2,8 +2,6 @@ package me.dio.model;
 
 import jakarta.persistence.Entity;
 
-import java.time.LocalTime;
-
 @Entity
 public class GamesOnLibrary extends Games {
 
