@@ -1,0 +1,1 @@
+web: java -jar build/libs/dio-desafio-cloud-0.0.1-SNAPSHOT.jar
