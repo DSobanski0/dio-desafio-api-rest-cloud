@@ -9,7 +9,6 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.toList;
 
 public record PlayerDTO (
-        Long id,
         String name,
         List<GamesOnLibraryDTO> gamesOnLibrary,
         List<GamesOnStoreDTO> gamesOnStore,
@@ -18,7 +17,6 @@ public record PlayerDTO (
 
     public PlayerDTO(Player model) {
         this(
-                model.getId(),
                 model.getName(),
                 ofNullable(model.getGamesOnLibrary()).orElse(emptyList()).stream().map(GamesOnLibraryDTO::new).collect(toList()),
                 ofNullable(model.getGamesOnStore()).orElse(emptyList()).stream().map(GamesOnStoreDTO::new).collect(toList()),
@@ -29,7 +27,6 @@ public record PlayerDTO (
 
     public Player toModel() {
         Player model = new Player();
-        model.setId(this.id);
         model.setName(this.name);
         model.setGamesOnLibrary(ofNullable(this.gamesOnLibrary).orElse(emptyList()).stream().map(GamesOnLibraryDTO::toModel).collect(toList()));
         model.setGamesOnStore(ofNullable(this.gamesOnStore).orElse(emptyList()).stream().map(GamesOnStoreDTO::toModel).collect(toList()));
